@@ -1,4 +1,4 @@
-# WordCamp Cape Town 2016 - Seagyn's Working Copy
+# WordCamp Cape Town 2016 - Morné's Working Copy
 
 Workshop: Introduction to Continuous Integration with WordPress
 
