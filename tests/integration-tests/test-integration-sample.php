@@ -31,4 +31,17 @@ class IntegrationTests extends \WP_UnitTestCase {
 			$actual,
 			'Option expected to equal ' . $expected . ' but instead was ' . $actual);
 	}
+
+	function test_wcct_save_meta() {
+		$post_id = $this->factory->post->create();
+		$expected = 'So meta';
+
+		wcct_save_post_meta($post_id, 'this_is_key', $expected);
+
+		$actual = get_post_meta($post_id, 'wcct_this_is_key', true);
+		$this->assertEquals(
+			$expected,
+			$actual,
+			'Post-meta was expected to equal ' . $expected . ' but instead was ' . $actual);
+	}
 }
